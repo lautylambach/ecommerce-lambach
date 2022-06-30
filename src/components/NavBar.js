@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css'
+import CartWidget from './CartWidget'
 
 
 export const NavBar = () => {
@@ -32,6 +33,7 @@ export const NavBar = () => {
             <Nav.Link className='navlink' href="#placasmadres">PlacasMadres</Nav.Link>
         
           </Nav>
+          <CartWidget cantItem={5}/>
           <Form className="d-flex">
             <Form.Control
                     type="search"
@@ -41,7 +43,9 @@ export const NavBar = () => {
             />
             <Button className='btn' variant="light">Search</Button>
             </Form>
+            
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
     </div>

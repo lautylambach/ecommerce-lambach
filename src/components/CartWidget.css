@@ -1,0 +1,16 @@
+button{
+    height: inherit;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25%;
+    margin-right: 10px;
+    
+   
+}
+button > i ,p{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    margin: 1px;
+}

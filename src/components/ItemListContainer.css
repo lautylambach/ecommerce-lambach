@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.greeting-banner{
+    background-image: url(../assets/low-poly-grid-haikei.svg);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.greeting-h3{
+    font-size: 70px;
+    color: azure;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+
+}
+.greeting-hr{
+    height: 10px;
+    color: azure;
+    border: none;
+    border-radius: 10px;
+    margin: 0;
+}
+.greeting-p {
+    font-size: 40px;
+    color: azure;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
