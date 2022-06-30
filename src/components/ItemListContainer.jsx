@@ -4,7 +4,7 @@ import './ItemListContainer.css'
 export const ItemListContainer =({greeting}) => {
     return(
         <>
-        <center>
+        
         <div className='greeting-banner'>
             <h3 className='greeting-h3'>Hola {greeting}</h3>
             <hr className='greeting-hr' />
@@ -12,7 +12,7 @@ export const ItemListContainer =({greeting}) => {
                 Listo para realizar una compra?!
             </p>
         </div>
-        </center>
+        
         </>
     )
 }

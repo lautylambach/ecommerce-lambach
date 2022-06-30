@@ -4,10 +4,11 @@
 
 .greeting-banner{
     background-image: url(../assets/low-poly-grid-haikei.svg);
-    height: 10vh;
+    height: 15vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    align-content: center;
     padding: 15px;
 }
 .greeting-h3{
@@ -18,15 +19,30 @@
 
 }
 .greeting-hr{
-    height: 10px;
+    height: 10px !important; 
     color: azure;
     border: none;
     border-radius: 10px;
     margin: 0;
+}
+.greeting-h3 ::placeholder {
+    color: aquamarine;
 }
 .greeting-p {
     font-size: 40px;
     color: azure;
     font-family: 'Roboto', sans-serif;
     margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+    .greeting-banner{
+        height: 20vh;
+        padding: 10px;
+    } 
+    .greeting-h3{
+        font-size: 45px;
+    }
+    .greeting-p{
+        font-size: 25px;
+    }
 }
