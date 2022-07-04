@@ -1,5 +1,5 @@
 import React from 'react'
-import './ItemListContainer.css'
+import '../css/ItemListContainer.css'
 
 export const ItemListContainer =({greeting}) => {
     return(
