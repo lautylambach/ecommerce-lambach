@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../css/CartWidget.css'
 
 
-export const CartWidget = ({cantItem}) => {
+export const CartWidget = ({initial}) => {
+    
+    const[cantCarrito, setCarrito] = useState (parseInt(initial));
+
+    useEffect(()=>{
+        setCarrito(parseInt(initial))
+    },[initial])
+
+
     return(
         <button>
             <i className="bi bi-cart btn"></i>
-            <p>{cantItem}</p>
+            <p>{cantCarrito}</p>
         </button>
     );
 }

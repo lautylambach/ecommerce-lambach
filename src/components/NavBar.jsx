@@ -33,7 +33,7 @@ export const NavBar = () => {
             <Nav.Link className='navlink' href="#placasmadres">PlacasMadres</Nav.Link>
         
           </Nav>
-          <CartWidget cantItem={5}/>
+          <CartWidget initial={0}/>
           <Form className="d-flex">
             <Form.Control
                     type="search"
