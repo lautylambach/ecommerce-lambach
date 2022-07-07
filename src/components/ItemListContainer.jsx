@@ -5,6 +5,7 @@ import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 
 
+
 const items =[
     {id:1, categoria:'periferico',image:'../assets/itemImg/periferico1.png',titulo:'TECLADO + MOUSE SHENLONG C2001',descripcion:'Combo teclado y mouse. Teclado: Idioma: Espanol. Teclas: 105. Funcion antighosting. Cable: 1.5 Mtrs. Retroiluminacion: Rainbow. Mouse: Sensibilidad: Ajustable 800 - 1600 - 2400 - 3200 Dpi. Botones: 7. Sensor: NST5312. Retroiluminacion: RGB. Cable: 1,5mtrs.',precio:'$3399'},
     {id:2, categoria:'periferico',image:'../assets/itemImg/periferico2.png',titulo:'COMBO GAMER MARVO CM409',descripcion:'Combo gamer. MOUSE: Optico. DPI: 800-1600-2400-3200. Botones: 6. Luz de fondo: 7 colores. Longuitud de cablke: 1.5 Mts. TECLADO: USB. Longuitud del cable 1.5 Mts. Luz RGB. AURICULAR: Sonido estereo. Tamano de drive: 40mm. Tipo de microfono: Omnidireccional. Longuitud del cable: 1.8 Mts. MOUSE PAD: Diseno anti-sudor. Base de goma antideslizante.',precio:'$4729'},
