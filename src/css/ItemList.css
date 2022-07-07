@@ -1,9 +1,11 @@
 .item-list{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 2rem;
+    width: 85vw;
+    padding: 0;
     
 
 }

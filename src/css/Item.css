@@ -8,14 +8,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25rem;
-    height: 35rem;
+    width: 17rem;
+    height: 22rem;
     padding: 1.5rem;
     margin: .5rem;
 }
 .item-img{
     width: 5rem;
-    height: 7rem;
+    height: 5rem;
+    margin-bottom: 10px;
 }
 .item-titulo{
     color: azure;
@@ -25,10 +26,10 @@
 .item-desc{
     color: #021421;
     font-family: 'Roboto',sans-serif;
-    font-size: 1rem;
+    font-size: .5rem;
 }
 .tem-precio{
     color: #021421;
     font-family: 'Roboto',sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }

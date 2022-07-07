@@ -4,6 +4,7 @@ span{
 }
 .nav-bar{
     height: 5vh;
+    width: 100vw;
 }
 .navlink{
     font-size: large;
