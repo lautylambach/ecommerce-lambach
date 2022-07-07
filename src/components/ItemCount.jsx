@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
-import '../css/ContadorConBoton.css'
+import '../css/ItemCount.css'
 import { Button } from 'react-bootstrap'
 
- const ContadorConBoton = ({initial, stockItem, onAdd}) => {
+ const ItemCount = ({initial, stockItem, onAdd}) => {
     const [numero, setNumero] = useState (parseInt(initial));
 
     const reducir = () =>{
@@ -31,4 +31,4 @@ import { Button } from 'react-bootstrap'
     </div>
   )
 }
-export default ContadorConBoton;
+export default ItemCount;

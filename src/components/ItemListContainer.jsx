@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import '../css/ItemListContainer.css'
 import '../css/ItemList.css'
-import ContadorConBoton from './ContadorConBoton'
+import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 
 
@@ -44,7 +44,7 @@ export const ItemListContainer =({greeting}) => {
             </p>
             <div>
             
-            <ContadorConBoton initial={1} stockItem={10} onAdd={onAdd}/>
+            <ItemCount initial={1} stockItem={10} onAdd={onAdd}/>
             <div className='item-list'>
             <ItemList  data={data}/> 
             </div>
