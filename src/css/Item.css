@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.item-container{
+    background-color: #24678A;
+    border-style: solid;
+    border-color: #021421;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    height: 35rem;
+    padding: 1.5rem;
+    margin: .5rem;
+}
+.item-img{
+    width: 5rem;
+    height: 7rem;
+}
+.item-titulo{
+    color: azure;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+.item-desc{
+    color: #021421;
+    font-family: 'Roboto',sans-serif;
+    font-size: 1rem;
+}
+.tem-precio{
+    color: #021421;
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.2rem;
+}
