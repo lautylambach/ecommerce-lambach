@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import '../css/ItemListContainer.css'
 import '../css/ItemList.css'
-import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 
 
@@ -19,7 +18,7 @@ export const ItemListContainer =({greeting}) => {
     const [data,setData] = useState([]);
 
     useEffect(() =>{
-        const getData = new Promise(resolve =>{
+         const getData =  new Promise(resolve =>{
             setTimeout(()=>{
                 resolve(items)
             },2000);
