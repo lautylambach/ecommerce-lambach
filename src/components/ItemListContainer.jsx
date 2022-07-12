@@ -28,11 +28,6 @@ export const ItemListContainer =({greeting}) => {
 
     },[])
 
-    const onAdd = (quantity) =>{
-        console.log(`compraste ${quantity} unidades`);
-        console.log('se enviara al carrito')
-        
-    }
 
     return(
         <>
@@ -43,14 +38,10 @@ export const ItemListContainer =({greeting}) => {
             <p className='greeting-p'>
                 Listo para realizar una compra?!
             </p>
-            <div>
-            
-            <ItemCount initial={1} stockItem={10} onAdd={onAdd}/>
             <div className='item-list'>
             <ItemList  data={data}/> 
             </div>
-            
-            </div>
+        
         </div>
         
         

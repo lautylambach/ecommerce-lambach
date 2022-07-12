@@ -13,7 +13,7 @@ export const ItemDetailContainer = ({info}) => {
 const [data, setData] = useState({});
 
 useEffect(()=>{
-  const getData =new Promise(resolve =>{
+  const getData = new Promise(resolve =>{
     setTimeout(()=>{
       resolve(info);
     },3000)
