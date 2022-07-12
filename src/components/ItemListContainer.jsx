@@ -20,7 +20,7 @@ export const ItemListContainer =({greeting}) => {
     useEffect(() =>{
          const getData =  new Promise(resolve =>{
             setTimeout(()=>{
-                resolve(items)
+                resolve(items) 
             },2000);
         });
         getData.then(res => setData(res))
