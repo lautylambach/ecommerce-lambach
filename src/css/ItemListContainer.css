@@ -10,11 +10,9 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    align-content: center;
     padding: 15px;
-    display: flex;
     justify-content: center;
-    flex-direction: column;
+    
 }
 .greeting-h3{
     font-size: 70px;

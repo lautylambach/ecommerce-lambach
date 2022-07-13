@@ -1,7 +1,7 @@
 .item-list{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
     width: 85vw;

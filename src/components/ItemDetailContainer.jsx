@@ -1,19 +1,15 @@
 import React from 'react'
 import ItemDetail from './ItemDetail';
 import { useState, useEffect } from 'react';
+import { Modal } from 'react-bootstrap';
 
-const item={
 
-}
 export const ItemDetailContainer = ({info}) => {
-//evento para mostrar el detail//
 
-
-
+// data promise
 const [data, setData] = useState({});
-
 useEffect(()=>{
-  const getData = new Promise(resolve =>{
+  const getData =new Promise(resolve =>{
     setTimeout(()=>{
       resolve(info);
     },3000)
@@ -23,6 +19,9 @@ useEffect(()=>{
 
   return (
     <ItemDetail data={data}/>
+    
   )
 }
 export default ItemDetailContainer;
+
+
