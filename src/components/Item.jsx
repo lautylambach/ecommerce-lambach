@@ -12,11 +12,15 @@ export const Item = ({info}) => {
 
   return (
     <Container className='item-container'>
+      <div>
         <img className='item-img' src={info.image} alt={info.titulo} />
         <h3 className='item-titulo'>{info.titulo}</h3>
         <span className='item-precio'>{info.precio}</span>
+      </div>
+      <div>
         <Button className='btn-item' variant="primary" onClick={handleShow}>Comprar</Button>
-
+      </div>
+        
         <Modal className='item-modal' show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Producto Seleccionado</Modal.Title>
