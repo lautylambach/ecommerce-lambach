@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { Button, Container, } from 'react-bootstrap'
 import '../css/Item.css'
-import ItemDetailContainer from './ItemDetailContainer';
 import {Link} from 'react-router-dom'
 
 export const Item = ({info}) => {
@@ -16,7 +15,7 @@ export const Item = ({info}) => {
       </div>
       <div>
       
-        <Button className='btn-item' variant="primary" ><Link className='navlink' to={`/item/:${info.id}`}>Comprar</Link></Button>
+        <Button className='btn-item' variant="primary" ><Link className='navlink' to={`/item/${info.id}`}>Comprar</Link></Button>
         
       </div>
       
