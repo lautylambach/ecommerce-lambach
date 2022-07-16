@@ -31,6 +31,7 @@ useEffect(()=>{
   return (
    
       <ItemDetail data={data}/>
+     
     
     
   )
