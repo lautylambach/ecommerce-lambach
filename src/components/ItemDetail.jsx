@@ -15,7 +15,7 @@ export const ItemDetail = ({data}) => {
         <div className='detail'>
             <img className='detail-img' src={data.image} alt=""/>
             <div className='content'>
-                <h2 className='item-titulo'> {data.title}</h2>
+                <h2 className='item-titulo'> {data.titulo}</h2>
                 <p className='item-desc'>{data.descripcion}</p>
                 <span className='item-precio'>{data.precio}</span>
                 <ItemCount initial={1} stockItem={data.stock} onAdd={onAdd}/>
