@@ -16,7 +16,7 @@ export const Item = ({info}) => {
       </div>
       <div>
       
-        <Button className='btn-item' variant="primary" ><Link to={`/item/:${info.id}`}>Comprar</Link></Button>
+        <Button className='btn-item' variant="primary" ><Link className='navlink' to={`/item/:${info.id}`}>Comprar</Link></Button>
         
       </div>
       
