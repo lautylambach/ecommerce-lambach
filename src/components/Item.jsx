@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, Container, Modal } from 'react-bootstrap'
 import '../css/Item.css'
 import ItemDetailContainer from './ItemDetailContainer';
+
 export const Item = ({info}) => {
 
   const [show, setShow] = useState(false);
@@ -12,13 +13,16 @@ export const Item = ({info}) => {
 
   return (
     <Container className='item-container'>
+      
       <div>
         <img className='item-img' src={info.image} alt={info.titulo} />
         <h3 className='item-titulo'>{info.titulo}</h3>
         <span className='item-precio'>{info.precio}</span>
       </div>
       <div>
+      
         <Button className='btn-item' variant="primary" onClick={handleShow}>Comprar</Button>
+        
       </div>
         
         <Modal className='item-modal' show={show} onHide={handleClose}>
@@ -35,6 +39,7 @@ export const Item = ({info}) => {
           </Button>
         </Modal.Footer>
         </Modal>
+      
     </Container>
   )
 }

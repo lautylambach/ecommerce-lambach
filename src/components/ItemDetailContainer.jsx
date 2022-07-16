@@ -1,13 +1,15 @@
 import React from 'react'
 import ItemDetail from './ItemDetail';
 import { useState, useEffect } from 'react';
-import { Modal } from 'react-bootstrap';
+import {Link} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 
 export const ItemDetailContainer = ({info}) => {
 
 // data promise
 const [data, setData] = useState({});
+const {idItem} = useParams();
 useEffect(()=>{
   const getData =new Promise(resolve =>{
     setTimeout(()=>{
@@ -18,7 +20,9 @@ useEffect(()=>{
 },[])
 
   return (
-    <ItemDetail data={data}/>
+   
+      <ItemDetail data={data}/>
+    
     
   )
 }

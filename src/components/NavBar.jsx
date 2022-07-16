@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../css/NavBar.css'
 import CartWidget from './CartWidget'
+import { NavLink } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -14,8 +15,9 @@ export const NavBar = () => {
     <div>
     <Navbar className="nav-bar" bg="dark" variant={"dark"} expand="lg">
       <Container fluid>
-      <Navbar.Brand href="#home">
-            <img
+      <Navbar.Brand >
+          <NavLink className='navlink' to='/'>
+          <img
               alt=""
               src={logo}
               width="50"
@@ -23,17 +25,20 @@ export const NavBar = () => {
               className="d-inline-block align-top"
             />{' '}
             <span>Lambach Tienda Informatica</span>
+          </NavLink>
+            
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link className='navlink' href="#inicio">Inicio</Nav.Link>
-            <Nav.Link className='navlink' href="#periferico">Perifericos</Nav.Link>
-            <Nav.Link className='navlink' href="#monitores">Monitores</Nav.Link>
-            <Nav.Link className='navlink' href="#placasmadres">PlacasMadres</Nav.Link>
+          <Nav className="me-auto navflex">
+            <NavLink className='navlink' to='/'>Inicio</NavLink>
+            <NavLink className='navlink' to='/category/periferico'>Perifericos</NavLink>
+            <NavLink className='navlink' to='/category/monitor'>Monitores</NavLink>
+            <NavLink className='navlink' to='/category/placamadre'>PlacasMadres</NavLink>
         
           </Nav>
-          <CartWidget initial={0}/>
+          <NavLink className='navlink' to='/cart'><CartWidget initial={0}/></NavLink>
+          
           <Form className="d-flex">
             <Form.Control
                     type="search"

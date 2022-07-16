@@ -3,7 +3,10 @@ import './css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer} from './components/ItemListContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
+
 
 
 function App() {
@@ -11,23 +14,17 @@ function App() {
   return (
     
     <div className="App">
+      <BrowserRouter>
       <NavBar></NavBar>
-      {/*<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-  </header>*/}
-    <ItemListContainer greeting={nombreUsuario}/>
-    
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting={nombreUsuario}/>}/>
+        <Route path='/category/:id' element={<ItemListContainer greeting={nombreUsuario}/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
+      </Routes>
+      
+      
+      </BrowserRouter>
     </div>
   );
 }

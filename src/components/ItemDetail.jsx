@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
 import ItemCount from './ItemCount';
-import '../css/ItemDetail.css'
+import '../css/ItemDetail.css';
 export const ItemDetail = ({data}) => {
 
     const onAdd = (quantity) =>{

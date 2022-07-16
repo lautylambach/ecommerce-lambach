@@ -1,6 +1,7 @@
 
 span{
     font-size: large;
+    margin-top: 10px;
 }
 .nav-bar{
     height: 5vh;
@@ -8,7 +9,14 @@ span{
 }
 .navlink{
     font-size: large;
+    text-decoration: none;
+    color: azure;
+    margin:10px;
 }
 .btn{
     border-radius: 25%;
+}
+.navflex{
+    display: flex;
+    flex-direction: row;
 }
