@@ -4,14 +4,16 @@ import ItemCount from './ItemCount';
 import '../css/ItemDetail.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCartContext } from './CartContext';
 export const ItemDetail = ({data}) => {
     const[goToCart,setGoToCart] =useState(false);
-
+    const {addProduct} = useCartContext();
 
     const onAdd = (quantity) =>{
         console.log(`añadiste ${quantity} unidades`);
         console.log('se enviara al carrito')
         setGoToCart(true);
+        addItem(data,quantity);
         
     }
 

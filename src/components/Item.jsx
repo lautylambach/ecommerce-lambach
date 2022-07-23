@@ -1,8 +1,9 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Button, Container, } from 'react-bootstrap'
 import '../css/Item.css'
 import {Link} from 'react-router-dom'
+
 
 export const Item = ({info}) => {
 
