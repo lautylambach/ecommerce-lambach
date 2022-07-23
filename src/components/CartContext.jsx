@@ -22,6 +22,7 @@ const CartProvider = ({children}) =>{
             setCart([...cart,{...item,quantity}]);
         }
     }
+    console.log('carrito: ', cart);
 
     const clear = () => setCart([]);
     
