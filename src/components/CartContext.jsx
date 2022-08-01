@@ -11,7 +11,10 @@ export const useCartContext = () => useContext    (CartContext);
     const isInCart = (id) => {
         return cart.find(product => product.id === id) ? true : false;
     }
-
+    const totalPrice =()=>{
+        return cart.reduce((prev, act)=> prev+act.quantity*act.precio, 0);
+    }
+    const totalProducts = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0);
     const addItem = (item,quantity) =>{
         if (isInCart(item.id)){
             setCart(cart.map(product => {
@@ -35,7 +38,11 @@ export const useCartContext = () => useContext    (CartContext);
             clear,
             isInCart,
             removeItem,
-            addItem
+            addItem,
+            totalPrice,
+            totalProducts,
+            
+            cart
         }} >
             {children}
         </CartContext.Provider>
