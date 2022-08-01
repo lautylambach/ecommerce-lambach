@@ -12,12 +12,16 @@ export const CartWidget = ({initial}) => {
         setCarrito(parseInt(initial))
     },[initial])
 
+   
+        return(
+            
+            <button>
+                <i className="bi bi-cart btn"></i>
+                <p>{totalProducts()|| '0'}</p>
+            </button>
+        );
+    
 
-    return(
-        <button>
-            <i className="bi bi-cart btn"></i>
-            <p>{totalProducts()|| '0'}</p>
-        </button>
-    );
+    
 }
 export default CartWidget;
