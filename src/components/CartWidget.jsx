@@ -14,10 +14,10 @@ export const CartWidget = ({initial}) => {
 
    
         return(
-            
+
             <button>
                 <i className="bi bi-cart btn"></i>
-                <p>{totalProducts()|| '0'}</p>
+                <p>{totalProducts()|| ''}</p>
             </button>
         );
     
