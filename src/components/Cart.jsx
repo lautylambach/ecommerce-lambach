@@ -23,6 +23,7 @@ const  Cart= ()=> {
     const ordersCollection = collection(db,'orders');
     addDoc(ordersCollection, order)
     .then (({id}) => console.log(id))
+    .then (alert('se realizo la orden de compra'))
   }
 
 
