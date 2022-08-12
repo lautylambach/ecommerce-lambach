@@ -5,20 +5,31 @@ import '../css/ItemDetail.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext';
+import Loader from './Loader';
+import { useEffect } from 'react';
 export const ItemDetail = ({data}) => {
     const[goToCart,setGoToCart] =useState(false);
     const {addItem} = useCartContext();
+    const [loader,setLoader] = useState(true);
 
     const onAdd = (quantity) =>{
         console.log(`añadiste ${quantity} unidades`);
         console.log('se enviara al carrito')
         setGoToCart(true);
-        addItem(data,quantity);
-        
+        addItem(data,quantity); 
     }
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoader(false);
+        },1000)
+    })
 
   return (
     <Container className='container-detail'>
+        {loader ?
+        <Loader/>
+        :
         <div className='detail'>
             <img className='detail-img' src={data.image} alt=""/>
             <div className='content'>
@@ -39,6 +50,8 @@ export const ItemDetail = ({data}) => {
             </div>
             
         </div>
+        }
+        
     </Container>
   )
 }

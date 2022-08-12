@@ -8,23 +8,14 @@ import { useEffect } from 'react';
 
 
 const  Cart= ()=> {
+  const [compraRealizada,setCompraRealizada] = useState(false)
   const {cart, totalPrice,clear} = useCartContext();
   console.log(cart.length)
   const [order,setOrder] =useState({});
   const formRef = useRef()
   
-  const sendUserData = () =>{
-    
-  }
-  useEffect(()=> {
-    
-      formRef.current.reset();
-      console.log('done')
-      return(
-        alert('Datos cargados')
-      )
-    
-  }, [sendUserData])
+  
+  
  
   const handleClick = () =>{
     const db = getFirestore();
@@ -32,6 +23,7 @@ const  Cart= ()=> {
     addDoc(ordersCollection, order)
     .then (({id}) => console.log(id))
     .then (alert('se realizo la orden de compra'))
+    .then(setCompraRealizada(true))
   }
 
 
@@ -45,11 +37,14 @@ const  Cart= ()=> {
   } 
     return (
     <>
+    {compraRealizada?
+    <Link to='/'>Volver al Inicio</Link>
+    :
       <div>
       <p>
       Primero necesitamos tus datos:
-    </p>
-    <form
+      </p>
+      <form
       onSubmit ={ev =>{
         ev.preventDefault();
         setOrder({
@@ -63,25 +58,31 @@ const  Cart= ()=> {
           items:cart.map(product =>({id: product.id, titulo: product.titulo, precio: product.precio, quantity: product.quantity})),
           total: totalPrice(),
         })
+        formRef.current.reset();
+        console.log('done')
+        return(
+          alert('Datos cargados')
+        )
       }}
-      ref={formRef}
-    >
+      ref={formRef}>
       <input type="text" name='nombre'placeholder='Nombre' />
       <input type="text" name='email' placeholder='Email' />
       <input type="text" name='numero' placeholder='Numero Tel' />
       <input type="text" name='direccion' placeholder='Direccion' />
-      <button type='submit' onClick={sendUserData}>Cargar Datos</button>
-    </form>
-    </div>
-        {
-          cart.map(product=><ItemCart key={product.id} product={product}/>)
-        }
+      <button type='submit'>Cargar Datos</button>
+      </form>
+        {cart.map(product=><ItemCart key={product.id} product={product}/>)}
         <p>Precio Total: ${totalPrice()}</p>
         <button onClick={()=> clear()}>Borrar Carrito</button>
         <button onClick={handleClick}>Generar orden</button>
+        </div>
+      
+        
+    }
       </>
     )
   }
+  
   
 
 
