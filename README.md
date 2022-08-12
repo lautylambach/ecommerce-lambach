@@ -1,3 +1,17 @@
+# Ecommerce Lambach
+
+This project was made for the [CoderHouse's](https://www.coderhouse.com/) online course of React Js
+
+It´s was created with react, react-bootstrap, reactstrap, and firebase
+
+The Project consist in a IT eccomerce with 05 pages  (Cart, Home and 03 Categories of products)
+
+Hope you enjoy and could make some use of this!
+
+# Social Media
+[Linkdn](https://www.linkedin.com/in/lautaro-lambach-9b7769186/)
+[Instagram](https://www.instagram.com/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
