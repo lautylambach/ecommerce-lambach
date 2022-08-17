@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     border: solid 1px #021421;
     margin: 1rem;
+    align-items: center;
     
 }
 .itemCart-img{
@@ -12,4 +13,12 @@
     width: 4rem;
     align-self: center;
 
+}
+.container-item-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-item-cart > button{
+    width: fit-content;
 }

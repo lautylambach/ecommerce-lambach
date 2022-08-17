@@ -1,7 +1,5 @@
 import logo from '../logo.svg';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../css/NavBar.css'
@@ -38,16 +36,6 @@ export const NavBar = () => {
         
           </Nav>
           <NavLink className='navlink' to='/cart'><CartWidget initial={0}/></NavLink>
-          
-          <Form className="d-flex">
-            <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-            />
-            <Button className='btn' variant="light">Search</Button>
-            </Form>
             
         </Navbar.Collapse>
         

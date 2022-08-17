@@ -1,0 +1,45 @@
+.datos-container{
+    display: grid;
+    grid-template-areas: "form cart "
+                       "form cart "
+                       "total  total";
+  grid-template-rows: fit-content fit-content 5vh;
+  grid-template-columns: fit-content 50vw;
+  width: 100%;
+  height: 100%;
+}
+.form > p{
+    color: aliceblue;
+    margin: 1rem;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+.datos-container > .form{
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../low-poly-grid-haikei.svg);
+}
+.datos-container > .form > .form-datos{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color:#03375c ;
+    padding: 3rem;
+    
+}
+.datos-container > .form > .form-datos > input{
+    margin: 0.5rem;
+    color: aliceblue;
+
+}
+.datos-container > .cart{
+    grid-area: cart;
+    display:flex;
+    flex-direction: column;
+    background-color: #24678A;
+
+    
+}

@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 import ItemCart from './ItemCart';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useRef } from 'react';
-import { useEffect } from 'react';
+import "../css/Cart.css"
+
 
 
 const  Cart= ()=> {
@@ -29,10 +30,10 @@ const  Cart= ()=> {
 
   if (cart.length === 0){
     return(
-      <>
+      <div>
       <p>No hay elementos en el carrito</p>
       <Link to='/'>Seguir comprando</Link>
-      </>
+      </div>
     );
   } 
     return (
@@ -40,11 +41,12 @@ const  Cart= ()=> {
     {compraRealizada?
     <Link to='/'>Volver al Inicio</Link>
     :
-      <div>
-      <p>
-      Primero necesitamos tus datos:
-      </p>
-      <form
+      <div className='datos-container'>
+        <div className='form'>
+          <p>
+            Primero necesitamos tus datos:
+          </p>
+          <form className='form-datos'
       onSubmit ={ev =>{
         ev.preventDefault();
         setOrder({
@@ -69,13 +71,19 @@ const  Cart= ()=> {
       <input type="text" name='email' placeholder='Email' />
       <input type="text" name='numero' placeholder='Numero Tel' />
       <input type="text" name='direccion' placeholder='Direccion' />
-      <button type='submit'>Cargar Datos</button>
-      </form>
-        {cart.map(product=><ItemCart key={product.id} product={product}/>)}
-        <p>Precio Total: ${totalPrice()}</p>
-        <button onClick={()=> clear()}>Borrar Carrito</button>
-        <button onClick={handleClick}>Generar orden</button>
+      <button className='btn btn-light' type='submit'>Cargar Datos</button>
+          </form>
         </div>
+        <div className='cart'>
+          {cart.map(product=><ItemCart key={product.id} product={product}/>)}
+        </div>
+        <div className='total'>
+          <p>Precio Total: ${totalPrice()}</p>
+          <button className='btn btn-light' onClick={()=> clear()}>Borrar Carrito</button>
+          <button className='btn btn-light' onClick={handleClick}>Generar orden</button>
+        </div>
+        
+      </div>
       
         
     }

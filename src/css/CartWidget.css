@@ -3,7 +3,6 @@ button{
     width: 100px;
     display: flex;
     flex-direction: row;
-    border-radius: 25%;
     margin-right: 10px;
     
    

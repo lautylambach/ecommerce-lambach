@@ -1,8 +1,9 @@
 .container-detail{
     width: 18rem;
-    height: 25rem;
+    height: fit-content;
     margin: auto;
     background-color: rgba(240, 255, 255,0.1);
+    border: #24678A solid 1px;
 }
 
 .detail{
@@ -22,4 +23,14 @@
 }
 .content{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-desc{
+    font-size: smaller;
+}
+.item-titulo{
+    font-size: large;
+    color: #24678A;
 }

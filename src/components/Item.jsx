@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState, useContext } from 'react';
-import { Button, Container, } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import '../css/Item.css'
 import {Link} from 'react-router-dom'
 
@@ -8,11 +7,11 @@ import {Link} from 'react-router-dom'
 export const Item = ({info}) => {
 
   return (
-    <Container className='item-container'>
+    <div className='item-container container-fluid'>
       
       <div>
         <img className='item-img' src={info.image} alt={info.titulo} />
-        <h3 className='item-titulo'>{info.titulo}</h3>
+        <h3 className='item-titulo-list'>{info.titulo}</h3>
       </div>
       <div>
       
@@ -20,7 +19,7 @@ export const Item = ({info}) => {
         
       </div>
       
-    </Container>
+    </div>
   )
 }
 export default Item;
