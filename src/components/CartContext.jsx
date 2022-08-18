@@ -27,7 +27,7 @@ export const useCartContext = () => useContext    (CartContext);
             setCart([...cart,{...item,quantity}]);
         }
     }
-    console.log('carrito: ', cart);
+    
 
     const clear = () => setCart([]);
     

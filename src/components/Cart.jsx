@@ -11,7 +11,6 @@ import "../css/Cart.css"
 const  Cart= ()=> {
   const [compraRealizada,setCompraRealizada] = useState(false)
   const {cart, totalPrice,clear} = useCartContext();
-  console.log(cart.length)
   const [order,setOrder] =useState({});
   const formRef = useRef()
   
@@ -61,7 +60,6 @@ const  Cart= ()=> {
           total: totalPrice(),
         })
         formRef.current.reset();
-        console.log('done')
         return(
           alert('Datos cargados')
         )
@@ -79,8 +77,8 @@ const  Cart= ()=> {
         </div>
         <div className='total'>
           <p>Precio Total: ${totalPrice()}</p>
-          <button className='btn btn-light' onClick={()=> clear()}>Borrar Carrito</button>
-          <button className='btn btn-light' onClick={handleClick}>Generar orden</button>
+          <button className='btn btn-info' onClick={()=> clear()}>Borrar Carrito</button>
+          <button className='btn btn-info' onClick={handleClick}>Generar orden</button>
         </div>
         
       </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Spinner } from 'reactstrap'
 import '../css/bootstrap.min.css'
+import '../css/Cart.css'
 
 function Loader(){
     return(
-        <div>
+        <div className='spinner'>
             <Spinner color='info'/>
         </div>
     )
