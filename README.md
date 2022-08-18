@@ -8,7 +8,7 @@ The Project consist in a IT eccomerce with 05 pages  (Cart, Home and 03 Categori
 
 Hope you enjoy and could make some use of this!
 
-![funcionamiento de la app](./eccomerce%20lambach.gif){width=200px height=200px}
+![funcionamiento de la app](./eccomerce%20lambach.gif)
 
 # Social Media
 [Linkdn](https://www.linkedin.com/in/lautaro-lambach-9b7769186/)
