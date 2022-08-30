@@ -4,17 +4,16 @@ import ItemCount from './ItemCount';
 import '../css/ItemDetail.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useCartContext } from './CartContext';
+import { useCartContext } from '../context/Provider';
 import Loader from './Loader';
 import { useEffect } from 'react';
+
 export const ItemDetail = ({data}) => {
     const[goToCart,setGoToCart] =useState(false);
     const {addItem} = useCartContext();
     const [loader,setLoader] = useState(true);
 
     const onAdd = (quantity) =>{
-        console.log(`añadiste ${quantity} unidades`);
-        console.log('se enviara al carrito')
         setGoToCart(true);
         addItem(data,quantity); 
     }
@@ -51,7 +50,6 @@ export const ItemDetail = ({data}) => {
             
         </div>
         }
-        
     </Container>
   )
 }

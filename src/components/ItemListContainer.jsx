@@ -15,8 +15,6 @@ export const ItemListContainer =({greeting}) => {
     const {id}= useParams();
     
     useEffect(() =>{
-        
-
         const querydb = getFirestore();
         const queryCollection = collection(querydb,'productos')
         setLoader(true)
@@ -24,7 +22,6 @@ export const ItemListContainer =({greeting}) => {
             setLoader(false);
         },1500)
 
-       
         if(id){
             const queryFilter= query(queryCollection, where('categoria','==',id)
             )
@@ -37,10 +34,8 @@ export const ItemListContainer =({greeting}) => {
         
     },[id])
 
-
     return(
         <>
-        
         <div className='greeting-banner'>
             <h3 className='greeting-h3'>Hola {greeting}</h3>
             <hr className='greeting-hr' />
@@ -54,7 +49,6 @@ export const ItemListContainer =({greeting}) => {
                 :
                 <ItemList  data={data}/>
                 }      
-            
             </div>
         </div>
         </>
